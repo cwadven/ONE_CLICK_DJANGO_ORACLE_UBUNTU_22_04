@@ -69,6 +69,9 @@ echo "================start install_python3_11_and_postgresql_lib.sh============
 echo "================start install_postgresql14.sh=================="
 . "$CURRENT_FOLDER/jobs/install_postgresql14.sh"
 
+echo "================start install_redis.sh=================="
+. "$CURRENT_FOLDER/jobs/install_redis.sh"
+
 echo "================start install_pip_modules.sh=================="
 . "$CURRENT_FOLDER/jobs/install_pip_modules.sh"
 
