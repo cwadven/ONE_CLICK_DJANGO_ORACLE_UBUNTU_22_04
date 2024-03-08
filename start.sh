@@ -5,6 +5,8 @@ read -p "Enter .django_env file path: " DJANGO_ENV_FILE
 if [ ! -f $DJANGO_ENV_FILE ];
 echo ".django_env File not found"
 then
+exit 1
+fi
 
 echo "Example) https://github.com/cwadven/NullyDRFTemplate.git"
 read -p "Enter Git Project Url: " GIT_URL
