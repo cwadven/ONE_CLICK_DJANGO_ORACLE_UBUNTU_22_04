@@ -1,6 +1,4 @@
-vi /etc/init.d/celeryd
-
-cat <<EOF | sudo tee /etc/init.d/celeryd
+sudo tee /etc/init.d/celeryd << 'END'
 #!/bin/sh -e
 # ============================================
 #  celeryd - Starts the Celery worker daemon.
@@ -412,7 +410,7 @@ case "$1" in
 esac
 
 exit 0
-EOF
+END
 
 
 cat <<EOF | sudo tee /etc/default/celeryd
@@ -425,7 +423,7 @@ CELERYD_NODES="worker1"
 #   alternatively, you can specify the number of nodes to start:
 #CELERYD_NODES=10
 # Absolute or relative path to the 'celery' command:
-CELERY_BIN="/var/www/meme_backend/venv/bin/celery"
+CELERY_BIN="$MY_PROJECT_DIRECTORY/venv/bin/celery"
 # App instance to use
 # comment out this line if you don't use an app
 # celery.py 파일 있는 폴더
@@ -433,7 +431,7 @@ CELERY_APP="config"
 # or fully qualified:
 #CELERY_APP="app.tasks:app"
 # Where to chdir at start.
-CELERYD_CHDIR="/var/www/meme_backend/"
+CELERYD_CHDIR="$MY_PROJECT_DIRECTORY"
 # Extra command-line arguments to the worker
 CELERYD_OPTS="--time-limit=300 --concurrency=2 --loglevel=INFO --pool=solo"
 # Configure node-specific settings by appending node name to arguments:
