@@ -2,6 +2,10 @@
 echo "Example) /opt/.django_env"
 read -p "Enter .django_env file path: " DJANGO_ENV_FILE
 
+if [ ! -f $DJANGO_ENV_FILE ];
+echo ".django_env File not found"
+then
+
 echo "Example) https://github.com/cwadven/NullyDRFTemplate.git"
 read -p "Enter Git Project Url: " GIT_URL
 
@@ -22,9 +26,6 @@ read -p "Enter New Database User Name: " DATABASE_USER_NAME
 
 echo "Example) passwordsomething"
 read -p "Enter New Database User Password: " DATABASE_USER_PASSWORD
-
-if [ ! -f $DJANGO_ENV_FILE ];
-then
 
 with_git=(${GIT_URL##*/})
 split_with_git=(${with_git//./ })
