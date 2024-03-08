@@ -81,6 +81,9 @@ echo "================start set_gunicorn.sh=================="
 echo "================start setting_django_projects.sh=================="
 . "$CURRENT_FOLDER/jobs/setting_django_projects.sh"
 
+echo "================start django_migrate.sh=================="
+. "$CURRENT_FOLDER/jobs/django_migrate.sh"
+
 echo "================start restart_services.sh=================="
 . "$CURRENT_FOLDER/jobs/restart_services.sh"
 
