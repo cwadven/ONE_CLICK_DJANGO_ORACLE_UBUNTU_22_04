@@ -2,10 +2,9 @@
 echo "Example) /opt/.django_env"
 read -p "Enter .django_env file path: " DJANGO_ENV_FILE
 
-if [ ! -f $DJANGO_ENV_FILE ];
-echo ".django_env File not found"
-then
-exit 1
+if [ ! -f $DJANGO_ENV_FILE ]; then
+    echo ".django_env File not found"
+    exit 1
 fi
 
 echo "Example) https://github.com/cwadven/NullyDRFTemplate.git"
