@@ -90,6 +90,9 @@ echo "================start django_migrate.sh=================="
 echo "================start restart_services.sh=================="
 . "$CURRENT_FOLDER/jobs/restart_services.sh"
 
+echo "================start set_celery.sh=================="
+. "$CURRENT_FOLDER/jobs/set_celery.sh"
+
 unset GIT_URL
 unset PROJECT_NAME
 unset MY_PROJECT_DIRECTORY
