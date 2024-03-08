@@ -28,6 +28,12 @@ read -p "Enter New Database User Name: " DATABASE_USER_NAME
 echo "Example) passwordsomething"
 read -p "Enter New Database User Password: " DATABASE_USER_PASSWORD
 
+echo "Example) blog"
+read -p "Enter Flower Username: " FLOWER_USERNAME
+
+echo "Example) password"
+read -p "Enter Flower password: " FLOWER_PASSWORD
+
 with_git=(${GIT_URL##*/})
 split_with_git=(${with_git//./ })
 PROJECT_NAME=(${split_with_git[0]})
@@ -47,6 +53,8 @@ export DATABASE_USER_NAME
 export DATABASE_USER_PASSWORD
 export SERVER_USER_NAME
 export DJANGO_ENV_FILE
+export FLOWER_USERNAME
+export FLOWER_PASSWORD
 
 export CURRENT_FOLDER
 
@@ -93,6 +101,9 @@ echo "================start restart_services.sh=================="
 echo "================start set_celery.sh=================="
 . "$CURRENT_FOLDER/jobs/set_celery.sh"
 
+echo "================start set_flower_dashboard.sh=================="
+. "$CURRENT_FOLDER/jobs/set_flower_dashboard.sh"
+
 unset GIT_URL
 unset PROJECT_NAME
 unset MY_PROJECT_DIRECTORY
@@ -105,3 +116,5 @@ unset DATABASE_USER_NAME
 unset DATABASE_USER_PASSWORD
 unset SERVER_USER_NAME
 unset DJANGO_ENV_FILE
+unset FLOWER_USERNAME
+unset FLOWER_PASSWORD
