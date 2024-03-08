@@ -14,7 +14,7 @@ Description=gunicorn daemon for Django
 After=network.target
 
 [Service]
-User=ubuntu
+User=django
 Group=www-data
 WorkingDirectory=$MY_PROJECT_DIRECTORY
 Environment="DJANGO_SETTINGS_MODULE=$CONFIG_SETTINGS"
