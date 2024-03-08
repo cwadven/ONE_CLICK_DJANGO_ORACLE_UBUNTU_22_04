@@ -9,4 +9,4 @@ cp $DJANGO_ENV_FILE $MY_PROJECT_DIRECTORY/.django_env
 sudo chown -R django:djangogroup $MY_PROJECT_DIRECTORY/.django_env
 fi
 
-. $MY_PROJECT_DIRECTORY/venv/bin/activate && python manage.py collectstatic --noinput
+. $MY_PROJECT_DIRECTORY/venv/bin/activate && python $MY_PROJECT_DIRECTORY/manage.py collectstatic --noinput
