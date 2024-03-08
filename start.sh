@@ -57,6 +57,9 @@ echo "================start update_linux.sh=================="
 echo "================start open_filewall.sh=================="
 . "$CURRENT_FOLDER/jobs/open_filewall.sh"
 
+echo "================start intall_and_set_nginx.sh=================="
+. "$CURRENT_FOLDER/jobs/intall_and_set_nginx.sh"
+
 echo "================start set_project_directory_and_create_user_group.sh=================="
 . "$CURRENT_FOLDER/jobs/set_project_directory_and_create_user_group.sh"
 
@@ -68,9 +71,6 @@ echo "================start install_postgresql14.sh=================="
 
 echo "================start install_pip_modules.sh=================="
 . "$CURRENT_FOLDER/jobs/install_pip_modules.sh"
-
-echo "================start intall_and_set_nginx.sh=================="
-. "$CURRENT_FOLDER/jobs/intall_and_set_nginx.sh"
 
 echo "================start set_database.sh=================="
 . "$CURRENT_FOLDER/jobs/set_database.sh"
