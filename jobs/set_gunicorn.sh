@@ -16,9 +16,9 @@ After=network.target
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/var/www/$MY_PROJECT_DIRECTORY
+WorkingDirectory=$MY_PROJECT_DIRECTORY
 Environment="DJANGO_SETTINGS_MODULE=$CONFIG_SETTINGS"
-ExecStart=/var/www/$MY_PROJECT_DIRECTORY/venv/bin/gunicorn --workers=3 --bind 0.0.0.0:8000 config.wsgi:application
+ExecStart=$MY_PROJECT_DIRECTORY/venv/bin/gunicorn --workers=3 --bind 0.0.0.0:8000 config.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
