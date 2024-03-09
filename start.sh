@@ -7,6 +7,9 @@ if [ ! -f $DJANGO_ENV_FILE ]; then
     exit 1
 fi
 
+echo "Example) If it is project root directory, enter empty string or if it is inside the directory, config/settings/ (need to enter last at folder '/'!!!)"
+read -p "Enter where should .django_env file copy: " COPY_DJANGO_ENV_FILE_PATH
+
 echo "Example) https://github.com/cwadven/NullyDRFTemplate.git"
 read -p "Enter Git Project Url: " GIT_URL
 
@@ -53,6 +56,7 @@ export DATABASE_USER_NAME
 export DATABASE_USER_PASSWORD
 export SERVER_USER_NAME
 export DJANGO_ENV_FILE
+export COPY_DJANGO_ENV_FILE_PATH
 export FLOWER_USERNAME
 export FLOWER_PASSWORD
 
@@ -116,5 +120,6 @@ unset DATABASE_USER_NAME
 unset DATABASE_USER_PASSWORD
 unset SERVER_USER_NAME
 unset DJANGO_ENV_FILE
+unset COPY_DJANGO_ENV_FILE_PATH
 unset FLOWER_USERNAME
 unset FLOWER_PASSWORD
