@@ -1,14 +1,13 @@
-# Set Django project with git url
 echo "Example) /opt/.django_env"
-read -p "Enter .django_env file path: " DJANGO_ENV_FILE
+read -p "Enter .django_env file path: " DJANGO_ENV_FILE_PATH
 
-if [ ! -f $DJANGO_ENV_FILE ]; then
+if [ ! -f $DJANGO_ENV_FILE_PATH ]; then
     echo ".django_env File not found"
     exit 1
 fi
 
 echo "Example) If it is project root directory, enter empty string or if it is inside the directory, config/settings/ (need to enter last at folder '/'!!!)"
-read -p "Enter where should .django_env file copy: " COPY_DJANGO_ENV_FILE_PATH
+read -p "Enter where directory .django_env file paste: " PASTE_DJANGO_ENV_FOLDER_PATH
 
 echo "Example) https://github.com/cwadven/NullyDRFTemplate.git"
 read -p "Enter Git Project Url: " GIT_URL
@@ -41,6 +40,10 @@ with_git=(${GIT_URL##*/})
 split_with_git=(${with_git//./ })
 PROJECT_NAME=(${split_with_git[0]})
 
+with_path=(${DJANGO_ENV_FILE_PATH##*/})
+split_with_path=(${with_path//./ })
+DJANGO_ENV_FILE_NAME=(${split_with_path[0]})
+
 MY_PROJECT_DIRECTORY=/var/www/${PROJECT_NAME}
 
 CURRENT_FOLDER=$PWD
@@ -55,8 +58,9 @@ export TEST_DATABASE_NAME
 export DATABASE_USER_NAME
 export DATABASE_USER_PASSWORD
 export SERVER_USER_NAME
-export DJANGO_ENV_FILE
-export COPY_DJANGO_ENV_FILE_PATH
+export DJANGO_ENV_FILE_PATH
+export DJANGO_ENV_FILE_NAME
+export PASTE_DJANGO_ENV_FOLDER_PATH
 export FLOWER_USERNAME
 export FLOWER_PASSWORD
 
@@ -122,7 +126,8 @@ unset TEST_DATABASE_NAME
 unset DATABASE_USER_NAME
 unset DATABASE_USER_PASSWORD
 unset SERVER_USER_NAME
-unset DJANGO_ENV_FILE
-unset COPY_DJANGO_ENV_FILE_PATH
+unset DJANGO_ENV_FILE_PATH
+unset DJANGO_ENV_FILE_NAME
+unset PASTE_DJANGO_ENV_FOLDER_PATH
 unset FLOWER_USERNAME
 unset FLOWER_PASSWORD
