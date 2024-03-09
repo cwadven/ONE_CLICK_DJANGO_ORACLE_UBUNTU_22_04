@@ -40,9 +40,7 @@ with_git=(${GIT_URL##*/})
 split_with_git=(${with_git//./ })
 PROJECT_NAME=(${split_with_git[0]})
 
-with_path=(${DJANGO_ENV_FILE_PATH##*/})
-split_with_path=(${with_path//./ })
-DJANGO_ENV_FILE_NAME=(${split_with_path[0]})
+DJANGO_ENV_FILE_NAME=$(basename "$DJANGO_ENV_FILE_PATH")
 
 MY_PROJECT_DIRECTORY=/var/www/${PROJECT_NAME}
 
