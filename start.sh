@@ -101,6 +101,9 @@ echo "================start setting_django_projects.sh=================="
 echo "================start django_migrate.sh=================="
 . "$CURRENT_FOLDER/jobs/django_migrate.sh"
 
+echo "================start set_postgresql_id_sequence.sh=================="
+. "$CURRENT_FOLDER/jobs/set_postgresql_id_sequence.sh"
+
 echo "================start restart_services.sh=================="
 . "$CURRENT_FOLDER/jobs/restart_services.sh"
 
