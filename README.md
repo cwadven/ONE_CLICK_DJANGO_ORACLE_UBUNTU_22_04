@@ -15,11 +15,18 @@
 
 ### 아래 작업은 생성한 Oracle Cloud Instance 에서 하세요
 
+#### 0. .env 파일 어딘가 생성
+```
+vi /opt/.django_env
+```
+
 #### 1. root 권한으로 실행
 (pip install 에서 문제가 생겨서 root 권한 실행 )
 
 ```
 sudo su -
+
+cd ~
 
 git clone https://github.com/cwadven/ONE_CLICK_DJANGO_ORACLE_UBUNTU_22_04.git
 
