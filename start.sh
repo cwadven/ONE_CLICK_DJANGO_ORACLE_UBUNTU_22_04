@@ -108,6 +108,9 @@ echo "================start set_celery.sh=================="
 echo "================start set_flower_dashboard.sh=================="
 . "$CURRENT_FOLDER/jobs/set_flower_dashboard.sh"
 
+echo "================start add_cron.sh=================="
+. "$CURRENT_FOLDER/jobs/add_cron.sh"
+
 unset GIT_URL
 unset PROJECT_NAME
 unset MY_PROJECT_DIRECTORY
