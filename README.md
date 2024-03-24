@@ -38,3 +38,25 @@ cd ONE_CLICK_DJANGO_ORACLE_UBUNTU_22_04
 ```
 /bin/bash start.sh
 ```
+
+
+
+## 추가 사항
+
+- sudo apt-get update
+- sudo apt-get install postfix
+
+CRON 작업하는 경우 위 패키지가 없으면 아래와 가튼 에러가 나옵니다.
+```
+Mar 24 07:20:01 XXXXXX-dev cron[249758]: sendmail: fatal: open /etc/postfix/main.cf: No such file or directory
+Mar 24 07:20:01 XXXXXX-dev postfix/sendmail[249758]: fatal: open /etc/postfix/main.cf: No such file or directory
+Mar 24 07:20:01 XXXXXX-dev CRON[249755]: (root) MAIL (mailed 30 bytes of output but got status 0x004b from MTA
+                                        )
+Mar 24 07:20:01 XXXXXX-dev CRON[249755]: pam_unix(cron:session): session closed for user root
+Mar 24 07:21:01 XXXXXX-dev CRON[249772]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Mar 24 07:21:01 XXXXXX-dev CRON[249773]: (root) CMD (source /var/www/XXXXXX/venv/bin/activate && cd /var/www/XXXXXX && python manage.py check >> /tmp/log/django_commands.log 2>&1)
+Mar 24 07:21:01 XXXXXX-dev cron[249774]: sendmail: fatal: bad string length 0 < 1: setgid_group =
+Mar 24 07:21:01 XXXXXX-dev postfix/sendmail[249774]: fatal: bad string length 0 < 1: setgid_group =
+Mar 24 07:21:01 XXXXXX-dev CRON[249772]: (root) MAIL (mailed 30 bytes of output but got status 0x004b from MTA
+                                        )
+```
