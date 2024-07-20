@@ -44,7 +44,9 @@ cd ONE_CLICK_DJANGO_ORACLE_UBUNTU_22_04
 ## 추가 사항
 
 - sudo apt-get update
-- sudo apt-get install postfix
+- sudo apt-get install -y postfix
+
+세팅으로는 no configure... 설정
 
 CRON 작업하는 경우 위 패키지가 없으면 아래와 가튼 에러가 나옵니다.
 ```
