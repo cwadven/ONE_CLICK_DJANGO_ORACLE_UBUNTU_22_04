@@ -1,3 +1,31 @@
+echo "log 폴더 확인중 ..."
+if [ ! -d "/var/log/gunicorn" ];
+    echo "log 폴더가 존재하지 않습니다. 생성 중..."
+    mkdir -p /var/log/gunicorn
+then
+    echo "already exists"
+else
+
+echo "access log 파일 확인중 ..."
+if [ -e "/var/log/gunicorn/access.log" ];
+    echo "access log 파일이 존재하지 않습니다. 생성 중..."
+    sudo touch /var/log/gunicorn/access.log
+then
+    echo "already exists"
+else
+
+echo "error log 파일 확인중 ..."
+if [ -e "/var/log/gunicorn/error.log" ];
+    echo "error log 파일이 존재하지 않습니다. 생성 중..."
+    sudo touch /var/log/gunicorn/error.log
+then
+    echo "already exists"
+else
+
+echo "권한 설정중 ..."
+sudo chown -R django:www-data /var/log/gunicorn
+sudo chmod -R 755 /var/log/gunicorn
+
 if [ -e "$MY_PROJECT_DIRECTORY/app.log" ];
 then
 echo "already exists"
