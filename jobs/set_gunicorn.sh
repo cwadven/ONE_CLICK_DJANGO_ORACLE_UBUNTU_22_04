@@ -10,19 +10,19 @@ fi
 echo "access log 파일 확인중 ..."
 if [ -e "/var/log/gunicorn/access.log" ];
 then
+    echo "already exists"
+else
     echo "access log 파일이 존재하지 않습니다. 생성 중..."
     sudo touch /var/log/gunicorn/access.log
-else
-    echo "already exists"
 fi
 
 echo "error log 파일 확인중 ..."
 if [ -e "/var/log/gunicorn/error.log" ];
 then
+    echo "already exists"
+else
     echo "error log 파일이 존재하지 않습니다. 생성 중..."
     sudo touch /var/log/gunicorn/error.log
-else
-    echo "already exists"
 fi
 
 echo "권한 설정중 ..."
