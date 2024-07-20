@@ -35,6 +35,8 @@ cd ONE_CLICK_DJANGO_ORACLE_UBUNTU_22_04
 
 #### 2. 스크립트 실행
 
+실행 전, 추가 사항 일기
+
 ```
 /bin/bash start.sh
 ```
