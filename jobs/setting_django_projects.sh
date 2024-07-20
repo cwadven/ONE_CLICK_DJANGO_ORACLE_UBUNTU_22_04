@@ -5,7 +5,7 @@ else
 cd $MY_PROJECT_DIRECTORY && sudo mkdir temp_static
 fi
 
-if [ -e "$MY_PROJECT_DIRECTORY/$PASTE_DJANGO_ENV_FOLDER_PATH$DJANGO_ENV_FILE_NAME" ];
+if [ -e "$MY_PROJECT_DIRECTORY/$DJANGO_ENV_FILE_NAME" ];
 then
 echo "already exists"
 else
