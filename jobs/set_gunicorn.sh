@@ -49,7 +49,7 @@ User=django
 Group=www-data
 WorkingDirectory=$MY_PROJECT_DIRECTORY
 Environment="DJANGO_SETTINGS_MODULE=$CONFIG_SETTINGS"
-ExecStart=$MY_PROJECT_DIRECTORY/venv/bin/gunicorn --workers=3 --bind 0.0.0.0:8000 config.wsgi:application
+ExecStart=$MY_PROJECT_DIRECTORY/venv/bin/gunicorn --workers=3 --bind 0.0.0.0:8000 --access-logfile /var/log/gunicorn/access.log --error-logfile /var/log/gunicorn/error.log config.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
