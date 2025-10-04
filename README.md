@@ -76,3 +76,6 @@ Mar 24 07:21:01 XXXXXX-dev postfix/sendmail[249774]: fatal: bad string length 0 
 Mar 24 07:21:01 XXXXXX-dev CRON[249772]: (root) MAIL (mailed 30 bytes of output but got status 0x004b from MTA
                                         )
 ```
+
+Google Cloud 용 방법
+https://cwbeany.com/tip_dev/77
