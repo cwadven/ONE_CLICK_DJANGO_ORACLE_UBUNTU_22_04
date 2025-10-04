@@ -20,7 +20,6 @@
 ```
 sudo apt-get update
 sudo apt-get install vim
-sudo apt install software-properties-common
 ```
 
 #### 0. .env 파일 어딘가 생성
