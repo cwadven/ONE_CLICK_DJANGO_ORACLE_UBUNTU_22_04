@@ -24,7 +24,7 @@ sudo apt-get install vim
 
 #### 0. .env 파일 어딘가 생성
 ```
-vi /opt/.django_env
+sudo vi /opt/.django_env
 ```
 
 #### 1. root 권한으로 실행
