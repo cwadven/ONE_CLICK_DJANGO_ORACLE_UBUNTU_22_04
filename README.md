@@ -50,6 +50,9 @@ cd ONE_CLICK_DJANGO_ORACLE_UBUNTU_22_04
 /bin/bash start.sh
 ```
 
+## Github 권한 나올때
+
+https://github.com/settings/tokens 들어가서 token classic 생성 하나 하고 토큰 저장하고 비밀번호에 토큰 등록
 
 
 ## 추가 사항
