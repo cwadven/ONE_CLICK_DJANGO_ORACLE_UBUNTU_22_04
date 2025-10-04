@@ -15,6 +15,13 @@
 
 ### 아래 작업은 생성한 Oracle Cloud Instance 에서 하세요
 
+#### -1. 기본 설정
+
+```
+sudo apt-get update
+sudo apt-get install vim
+```
+
 #### 0. .env 파일 어딘가 생성
 ```
 vi /opt/.django_env
