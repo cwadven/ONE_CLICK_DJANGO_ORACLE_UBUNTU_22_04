@@ -42,20 +42,7 @@ git clone https://github.com/cwadven/ONE_CLICK_DJANGO_ORACLE_UBUNTU_22_04.git
 cd ONE_CLICK_DJANGO_ORACLE_UBUNTU_22_04
 ```
 
-#### 2. 스크립트 실행
-
-실행 전, 추가 사항 일기
-
-```
-/bin/bash start.sh
-```
-
-## Github 권한 나올때
-
-https://github.com/settings/tokens 들어가서 token classic 생성 하나 하고 토큰 저장하고 비밀번호에 토큰 등록
-
-
-## 추가 사항
+## CRON 수행 잘되게...
 
 - sudo apt-get update
 - sudo apt-get install -y postfix
@@ -76,6 +63,17 @@ Mar 24 07:21:01 XXXXXX-dev postfix/sendmail[249774]: fatal: bad string length 0 
 Mar 24 07:21:01 XXXXXX-dev CRON[249772]: (root) MAIL (mailed 30 bytes of output but got status 0x004b from MTA
                                         )
 ```
+
+#### 2. 스크립트 실행
+
+```
+/bin/bash start.sh
+```
+
+## Github 권한 나올때
+
+https://github.com/settings/tokens 들어가서 token classic 생성 하나 하고 토큰 저장하고 비밀번호에 토큰 등록
+
 
 Google Cloud 용 방법
 https://cwbeany.com/tip_dev/77
