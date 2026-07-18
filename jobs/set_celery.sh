@@ -433,7 +433,9 @@ CELERY_APP="config"
 # Where to chdir at start.
 CELERYD_CHDIR="$MY_PROJECT_DIRECTORY"
 # Extra command-line arguments to the worker
-CELERYD_OPTS="--time-limit=300 --concurrency=2 --loglevel=INFO --pool=solo"
+# concurrency 는 현재 서버의 CPU 코어 수(nproc)에 맞춰 자동 설정한다.
+# (--pool=solo 는 항상 단일 프로세스라 concurrency 가 무시되므로 제거)
+CELERYD_OPTS="--time-limit=300 --concurrency=$(nproc) --loglevel=INFO"
 # Configure node-specific settings by appending node name to arguments:
 #CELERYD_OPTS="--time-limit=300 -c 8 -c:worker2 4 -c:worker3 2 -Ofair:worker1"
 # Set logging level to DEBUG

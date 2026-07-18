@@ -147,6 +147,9 @@ echo "================start install_cron.sh=================="
 echo "================start add_cron.sh=================="
 . "$CURRENT_FOLDER/jobs/add_cron.sh"
 
+echo "================start set_aliases.sh=================="
+. "$CURRENT_FOLDER/jobs/set_aliases.sh"
+
 unset GIT_URL
 unset GIT_BRANCH
 unset PROJECT_NAME

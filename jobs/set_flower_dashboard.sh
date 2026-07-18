@@ -19,7 +19,6 @@ EOF
 sudo apt-get install firewalld -y
 sudo firewall-cmd --zone=public --add-port=5555/tcp --permanent
 sudo firewall-cmd --reload
-sudo ufw allow 5555
 
 sudo systemctl daemon-reload
 sudo systemctl start celery-flower.service
