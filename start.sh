@@ -77,8 +77,8 @@ echo "================start intall_and_set_nginx.sh=================="
 echo "================start set_project_directory_and_create_user_group.sh=================="
 . "$CURRENT_FOLDER/jobs/set_project_directory_and_create_user_group.sh"
 
-echo "================start install_python3_11_and_postgresql_lib.sh=================="
-. "$CURRENT_FOLDER/jobs/install_python3_11_and_postgresql_lib.sh"
+echo "================start install_python3_12_and_postgresql_lib.sh=================="
+. "$CURRENT_FOLDER/jobs/install_python3_12_and_postgresql_lib.sh"
 
 echo "================start install_postgresql14.sh=================="
 . "$CURRENT_FOLDER/jobs/install_postgresql14.sh"
