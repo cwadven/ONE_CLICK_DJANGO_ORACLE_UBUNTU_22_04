@@ -77,11 +77,11 @@ echo "================start intall_and_set_nginx.sh=================="
 echo "================start set_project_directory_and_create_user_group.sh=================="
 . "$CURRENT_FOLDER/jobs/set_project_directory_and_create_user_group.sh"
 
-echo "================start install_python3_12_and_postgresql_lib.sh=================="
-. "$CURRENT_FOLDER/jobs/install_python3_12_and_postgresql_lib.sh"
+echo "================start install_python_and_postgresql_lib.sh=================="
+. "$CURRENT_FOLDER/jobs/install_python_and_postgresql_lib.sh"
 
-echo "================start install_postgresql14.sh=================="
-. "$CURRENT_FOLDER/jobs/install_postgresql14.sh"
+echo "================start install_postgresql17.sh=================="
+. "$CURRENT_FOLDER/jobs/install_postgresql17.sh"
 
 echo "================start install_redis.sh=================="
 . "$CURRENT_FOLDER/jobs/install_redis.sh"
@@ -112,6 +112,9 @@ echo "================start set_celery.sh=================="
 
 echo "================start set_flower_dashboard.sh=================="
 . "$CURRENT_FOLDER/jobs/set_flower_dashboard.sh"
+
+echo "================start install_cron.sh=================="
+. "$CURRENT_FOLDER/jobs/install_cron.sh"
 
 echo "================start add_cron.sh=================="
 . "$CURRENT_FOLDER/jobs/add_cron.sh"

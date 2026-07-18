@@ -1,19 +1,19 @@
 # 원앤터 Django Ubuntu 배포
 
-#### Canonical-Ubuntu-22.04 Version (Oracle Cloud Instance)
+#### Canonical-Ubuntu-26.04 Version (Google Cloud Instance)
 
 ---
 
 ### Requirements
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) Version 3.12 <br>
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) Version 3.14 (Ubuntu 26.04 기본) <br>
 ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white) (Celery, Cache) <br>
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) Version 14 <br>
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) Version 17 (PGDG) <br>
 ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white) Version 5.2.16 <br>
 ![Celery](https://img.shields.io/badge/celery-%23092E20.svg?style=for-the-badge&logo=celery&logoColor=white) <br>
 ![Flower](https://img.shields.io/badge/flower-%23092E20.svg?style=for-the-badge&logo=flower&logoColor=white) <br>
 
-### 아래 작업은 생성한 Oracle Cloud Instance 에서 하세요
+### 아래 작업은 생성한 Google Cloud Instance 에서 하세요
 
 #### -1. 기본 설정
 
@@ -43,6 +43,15 @@ cd ONE_CLICK_DJANGO_ORACLE_UBUNTU_22_04
 ```
 
 ## CRON 수행 잘되게...
+
+- cron 자체가 설치되어 있지 않은 경우가 있으니 먼저 설치/활성화 해주세요.
+
+```
+sudo apt-get update
+sudo apt-get install -y cron
+sudo systemctl enable cron
+sudo systemctl start cron
+```
 
 - sudo apt-get update
 - sudo apt-get install -y postfix
