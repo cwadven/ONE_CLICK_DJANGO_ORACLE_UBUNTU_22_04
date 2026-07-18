@@ -27,6 +27,27 @@ sudo apt-get install vim
 sudo vi /opt/.django_env
 ```
 
+> ⚠️ **DATABASE 블록을 꼭 채우세요.**
+> 데이터베이스 이름/유저/비밀번호는 더 이상 스크립트 실행 중에 직접 입력받지 않고,
+> `.django_env` 의 `DATABASE` 블록에서 그대로 읽어와 DB 를 생성합니다.
+> 아래 값들을 실제 값으로 채워주세요. (`NAME`, `USER`, `PASSWORD`, `TEST.NAME` 는 필수)
+>
+> ```json
+> "DATABASE": {
+>     "ENGINE": "django.db.backends.postgresql",
+>     "NAME": "여기에_DB이름",
+>     "USER": "여기에_DB유저",
+>     "PASSWORD": "여기에_DB비밀번호",
+>     "HOST": "localhost",
+>     "PORT": "5432",
+>     "TEST": {
+>         "NAME": "여기에_테스트DB이름"
+>     }
+> }
+> ```
+>
+> 이 블록이 비어있거나 형식이 잘못되면 스크립트가 시작 단계에서 멈춥니다.
+
 #### 1. root 권한으로 실행
 (pip install 에서 문제가 생겨서 root 권한 실행 )
 
