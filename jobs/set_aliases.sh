@@ -17,7 +17,7 @@ alias srg='systemctl restart gunicorn'
 alias src='service celeryd restart'
 alias srcf='systemctl restart celery-flower.service'
 alias gp='git pull'
-alias goto='cd $MY_PROJECT_DIRECTORY'
+alias goto='cd $MY_PROJECT_DIRECTORY && source venv/bin/activate'
 alias cu='mkdir -p /tmp/log && cd $MY_PROJECT_DIRECTORY && source venv/bin/activate && fab2 update-crontab && dos2unix command.cron && chmod 0644 command.cron && cat command.cron | crontab - && service cron restart'
 $MARKER_END
 EOF
