@@ -19,7 +19,7 @@
 
 ```
 sudo apt-get update
-sudo apt-get install vim
+sudo apt-get install -y vim
 ```
 
 #### 0. .env 파일 어딘가 생성
@@ -56,7 +56,7 @@ sudo su -
 
 cd ~
 
-sudo apt install git
+sudo apt install -y git
 
 git clone https://github.com/cwadven/ONE_CLICK_DJANGO_UBUNTU_26_04.git
 
@@ -65,21 +65,9 @@ cd ONE_CLICK_DJANGO_UBUNTU_26_04
 
 ## CRON 수행 잘되게...
 
-- cron 자체가 설치되어 있지 않은 경우가 있으니 먼저 설치/활성화 해주세요.
+- cron 설치/활성화와 postfix(No configuration) 설치는 이제 `start.sh` 실행 시 `jobs/install_cron.sh` 에서 **자동으로 처리**됩니다. 따로 수동 실행할 필요는 없습니다.
 
-```
-sudo apt-get update
-sudo apt-get install -y cron
-sudo systemctl enable cron
-sudo systemctl start cron
-```
-
-- sudo apt-get update
-- sudo apt-get install -y postfix
-
-세팅으로는 no configure... 설정
-
-CRON 작업하는 경우 위 패키지가 없으면 아래와 가튼 에러가 나옵니다.
+CRON 작업하는 경우 postfix 등 MTA 가 없으면 아래와 가튼 에러가 나옵니다. (위 자동 설치로 방지)
 ```
 Mar 24 07:20:01 XXXXXX-dev cron[249758]: sendmail: fatal: open /etc/postfix/main.cf: No such file or directory
 Mar 24 07:20:01 XXXXXX-dev postfix/sendmail[249758]: fatal: open /etc/postfix/main.cf: No such file or directory
