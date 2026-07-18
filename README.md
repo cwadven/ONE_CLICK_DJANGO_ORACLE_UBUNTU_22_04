@@ -58,9 +58,9 @@ cd ~
 
 sudo apt install git
 
-git clone https://github.com/cwadven/ONE_CLICK_DJANGO_ORACLE_UBUNTU_22_04.git
+git clone https://github.com/cwadven/ONE_CLICK_DJANGO_UBUNTU_26_04.git
 
-cd ONE_CLICK_DJANGO_ORACLE_UBUNTU_22_04
+cd ONE_CLICK_DJANGO_UBUNTU_26_04
 ```
 
 ## CRON 수행 잘되게...
